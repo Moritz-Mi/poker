@@ -25,6 +25,7 @@
 
 # Ignore build directories
 output/
+.vscode/
 
 # Ignore IDE and editor files
 *.swp
