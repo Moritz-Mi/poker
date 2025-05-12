@@ -49,8 +49,6 @@ private:
     int suit;
 };
 
-
-
 class Deck
 {
     public:
