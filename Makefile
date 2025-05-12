@@ -13,7 +13,7 @@ LIBS = -static -lmingw32 -lSDL2main -lSDL2 -Wl,--no-undefined -lm \
 # Code Dateien, nur die erste Datei vom Namen ändern --> NAME.CPP
 # Für Unterordner einfach das Makefile in den Ordner packen wo die Ordner alle sind
 # Dann einfach wie hier im Beispiel den Ordner und die Datei angeben. Die .exe wird jedoch in einen output-ordner erstellt.
-SRCS = main.cpp
+SRCS = src/main.cpp
 
 # Output-Verzeichnis
 OUTPUT_DIR = output
