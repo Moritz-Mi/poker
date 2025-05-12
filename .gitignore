@@ -1,0 +1,58 @@
+# Ignore objecy files and symbols
+*.o
+*.ko
+*.obj
+*.elf
+*.lib
+*.a
+*.so
+*.dll
+*.dylib
+*.ncb
+*.pdb
+*.idb
+*.ilk
+*.pdb
+*.manifest
+
+# Ignore temp files
+*.userprefs
+*.tmp
+*.temp
+*.log
+*.lock
+*.pid
+
+# Ignore build directories
+output/
+
+# Ignore IDE and editor files
+*.swp
+*.swo
+*.swn
+*.suo
+*.sdf
+*.userprefs
+*.vs
+*.vssscc
+*.sln
+*.csproj
+*.csproj.user
+*.db
+*.mdb
+*.ncb
+*.opendb
+*.scc
+*.suo
+*.pdb
+*.user
+*.userprefs
+
+# Ignore OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
