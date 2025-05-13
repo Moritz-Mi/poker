@@ -97,8 +97,9 @@ class Deck
 class Player
 {
     public:
-        Player(){
+        Player(int startMoney=100){
             onhand = 0;
+            money = startMoney;
         }
         void draw(Deck *deck){
             hand[onhand] = deck->draw();
@@ -107,10 +108,22 @@ class Player
         Card* getHand(int index){
             return hand[index];
         }
+        int getMoney(){
+            return money;
+        }
+        int getOnHand(){
+            return onhand;
+        }
+        void setMoney(int amount){
+            money = amount;
+        }    
     private:
         Card *hand[5];
         int onhand;
+        int money;
 };
+
+class Game;
 
 class GameState
 {
@@ -122,16 +135,74 @@ class GameState
         virtual ~GameState() = default;
 };
 
+class MenuState : public GameState
+{
+    public:
+        void enter() override {}
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
+class PreFlopState : public GameState
+{
+    public:
+        void enter() override {
+
+        }
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
+class FlopState : public GameState
+{
+    public:
+        void enter() override {}
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
+class TurnState : public GameState
+{
+    public:
+        void enter() override {}
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
+class RiverState : public GameState
+{
+    public:
+        void enter() override {}
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
+class ShowdownState : public GameState
+{
+    public:
+        void enter() override {}
+        void handleInput(Game &game) override {}
+        void update(Game &game) override {}
+        void exit() override {}
+};
+
 class Game
 {
     private:
         GameState *currentState;
+        int players;
+
     public:
-    
 };
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
+    Deck *deck = new Deck();
+    std::cout << "Hello World!" << deck->draw()->toString() << " " << deck->draw()->toString() << std::endl;
     return 0;
 }
